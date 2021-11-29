@@ -43,7 +43,7 @@ Usually, when you want to launch a JOB run you want to use exactly the same COND
 
 For example, you have trained a ML model in a Notebook and you have used the CONDA env "tensorflow27_p37_cpu_v1". 
 
-If you want to repeat several times the training, in batch mode, you can reuse the code in a JOB, but you want to ensure that you're using every time exactly the same CONDA env, with the same libraries' versions.
+If you want to repeat several times the training, in batch mode, you can reuse the code in a JOB, but you want to ensure that you're using, every time, exactly the same CONDA env, with the same libraries' versions.
 
 You can easily control this thing using JOBS. When you create a JOB you can specify the values for several environment variables.
 
@@ -54,6 +54,13 @@ CONDA_ENV_TYPE = service
 CONDA_ENV_SLUG = tensorflow27_p37_cpu_v1
 ```
 
-Service can be use for CONDA envs provided by Oracle Data Science.
+**Service** can be use for CONDA envs provided by Oracle Data Science.
 
 
+### How to read a CSV file directly from Object Storage using ocfs
+
+[OCFS](https://docs.oracle.com/en-us/iaas/tools/ocifs-sdk/latest/index.html) is a library, provided from Oracle Data Science team, that enables you to easily access the **Object Storage** as if it were a file system.
+
+Using the function **read_from_object_storage**, provided in utils.py, you can read a CSV file, stored on the Object Storage, in a **Pandas DataFrame**.
+
+In utils.py you can find also an example, useful to write a binary file (for example the model file) to Object Storage.
