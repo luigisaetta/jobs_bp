@@ -3,6 +3,12 @@
 #### Author:      L. Saetta
 #### Last update: 29/11/2021
 
+### JOBS types
+
+OCI Data Science can run two types of JOBS:
+* infrastructure JOBS (normally called JOBS)
+* DataFlow JOBS, run in OCI DataFLow (based on Apache Spark)
+
 ### Resource Principal
 
 In a DS JOB you most probably (or surely) need to access to others Cloud resources (for example: Object Storage)
@@ -17,10 +23,16 @@ You need to add a rule like this one to the definition of your dynamic group:
 all {resource.type='datasciencejobrun', resource.compartment.id= 'ocid1.compartment.oc1..aaaaaaaaoxmcrbf3x3kozxkehlontyvtb4vif64vedvkneqv3b6rozumpxzq'}
 ```
 
+### Get the Resource Principal Signer
+
+```
+rps = oci.auth.signers.get_resource_principals_signer()
+```
+
 ### How to get IDs in a Notebook Session
 
 When you want to launch a JOB you need to know:
-* compartId: the Id of the compartment containing the JOB
+* compartId: the Id of the OCI compartment containing the JOB
 * project Id
 
 You can get these information in a Notebook running in the same compartment/project, using this code:
