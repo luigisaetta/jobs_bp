@@ -63,4 +63,19 @@ CONDA_ENV_SLUG = tensorflow27_p37_cpu_v1
 
 Using the function **read_from_object_storage**, provided in utils.py, you can read a CSV file, stored on the Object Storage, in a **Pandas DataFrame**.
 
+```
+def read_from_object_storage(prefix, file_name):
+    # get access to OSS as an fs
+    # config={} assume RESOURCE PRINCIPAL auth
+    fs = ocifs.OCIFileSystem(config={})
+    
+    FILE_PATH = prefix + file_name
+    
+    # reading data from Object Storage
+    with fs.open(FILE_PATH, 'rb') as f:
+        df = pd.read_csv(f)
+    
+    return df
+```
+
 In utils.py you can find also an example, useful to write a binary file (for example the model file) to Object Storage.
