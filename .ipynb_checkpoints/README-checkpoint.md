@@ -3,4 +3,10 @@ This repository will contain a set of examples with best practices for using **D
 
 ## Features
 * How to launch a JOB using **REST API**
+* How to use OCIFS for reading from and writing to Object Storage
+* How to use Resource Principal
+
+## See
+* utils.py with examples on how to use ocifs
+
 
