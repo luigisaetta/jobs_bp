@@ -1,7 +1,7 @@
 # Some notes and best practices on DS JOBS
 
-### Author:      L. Saetta
-### Last update: 29/11/2021
+#### Author:      L. Saetta
+#### Last update: 29/11/2021
 
 ### Resource Principal
 In a DS JOB you most probably (or surely) need to access to others Cloud resources (for example: Object Storage)
