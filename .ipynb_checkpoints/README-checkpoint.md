@@ -9,4 +9,5 @@ This repository will contain a set of examples with best practices for using **D
 ## See
 * utils.py with examples on how to use ocifs
 
-
+## Documentation
+I have put some notes and best practices [here:](./bp.md) 
