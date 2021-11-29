@@ -4,6 +4,7 @@
 #### Last update: 29/11/2021
 
 ### Resource Principal
+
 In a DS JOB you most probably (or surely) need to access to others Cloud resources (for example: Object Storage)
 
 The simplest way of doing this is to use **Resource Principal (RP)**.
@@ -22,7 +23,7 @@ When you want to launch a JOB you need to know:
 * compartId: the Id of the compartment containing the JOB
 * project Id
 
-You can get these information in a Notebook running in the same compartment/project:
+You can get these information in a Notebook running in the same compartment/project, using this code:
 
 ```
 import os
@@ -35,3 +36,24 @@ print()
 print('The Project OCID is:', os.environ["PROJECT_OCID"])
 print()
 ```
+
+### Using CONDA Environments
+
+Usually, when you want to launch a JOB run you want to use exactly the same CONDA env you have used in a Notebook.
+
+For example, you have trained a ML model in a Notebook and you have used the CONDA env "tensorflow27_p37_cpu_v1". 
+
+If you want to repeat several times the training, in batch mode, you can reuse the code in a JOB, but you want to ensure that you're using every time exactly the same CONDA env, with the same libraries' versions.
+
+You can easily control this thing using JOBS. When you create a JOB you can specify the values for several environment variables.
+
+In this case you have to specify:
+
+```
+CONDA_ENV_TYPE = service
+CONDA_ENV_SLUG = tensorflow27_p37_cpu_v1
+```
+
+Service can be use for CONDA envs provided by Oracle Data Science.
+
+
