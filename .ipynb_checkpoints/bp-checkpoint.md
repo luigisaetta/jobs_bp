@@ -6,16 +6,16 @@
 ### JOBS types
 
 OCI Data Science can run two types of JOBS:
-* infrastructure JOBS (normally called JOBS)
-* DataFlow JOBS, run in OCI DataFLow (based on Apache Spark)
+* Infrastructure JOBS (normally called JOBS)
+* DataFlow JOBS, run in OCI DataFlow (based on Apache Spark)
 
 ### Resource Principal
 
-In a DS JOB you most probably (or surely) need to access to others Cloud resources (for example: Object Storage)
+In a DS JOB you most probably (or surely) need to access to other Cloud resources (for example: Object Storage)
 
 The simplest way of doing this is to use **Resource Principal (RP)**.
 
-To be able to use Resource Principal, the easy way is to add Data Science JOBs, defined in the compartment you're working with, in the same **Dynamic Group** you're using for Notebooks Sessions.
+To be able to use Resource Principal, the easy way is to add Data Science JOBs, defined in the compartment you're working with, in the same **Dynamic Group** you're using for Notebooks' Sessions.
 
 You need to add a rule like this one to the definition of your dynamic group:
 
@@ -24,6 +24,8 @@ all {resource.type='datasciencejobrun', resource.compartment.id= 'ocid1.compartm
 ```
 
 ### Get the Resource Principal Signer
+
+In a Notebook, you can use this code:
 
 ```
 rps = oci.auth.signers.get_resource_principals_signer()
