@@ -1,7 +1,7 @@
 # Some notes and best practices on DS JOBS
 
 #### Author:      L. Saetta
-#### Last update: 29/11/2021
+#### Last update: 30/11/2021
 
 ### JOBS types
 
@@ -92,4 +92,10 @@ def read_from_object_storage(prefix, file_name):
     return df
 ```
 
-In utils.py you can find also an example, useful to write a binary file (for example the model file) to Object Storage.
+In utils.py you can find also an example, useful to **write** a binary file (for example the model file) to Object Storage.
+
+### Pipelines
+
+You can launch a DS JOB using the REST API ([see](./test_invoke_job_run.ipynb)).
+
+In OCI Data Integration you can use **REST task** to invoke a REST service. Therefore you can include in a OCI DI pipeline the call to launch a DS Job.

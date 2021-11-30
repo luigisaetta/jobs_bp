@@ -1,7 +1,7 @@
 # jobs_bp
 This repository contains a set of examples with best practices for using **Data Science Jobs**
 
-With **Data Science JOBS** you can do, in batch mode: Data Preparation, Training of a ML model, Validation, Scoring.
+With **Data Science JOBS** you can do in batch mode: Data Preparation, Training of a ML model, Validation, Scoring.
 
 ## Features
 * How to launch a JOB using **REST API**
