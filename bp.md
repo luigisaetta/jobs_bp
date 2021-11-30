@@ -99,3 +99,13 @@ In utils.py you can find also an example, useful to **write** a binary file (for
 You can launch a DS JOB using the REST API ([see](./test_invoke_job_run.ipynb)).
 
 In OCI Data Integration you can use **REST task** to invoke a REST service. Therefore you can include in a OCI DI pipeline the call to launch a DS Job.
+
+### Zip file
+
+It is possible to create a JOB from a zip file containing multiple .py files (+ additional files).
+
+In this case, when you create the JOB you have to specify
+
+```
+JOB_RUN_ENTRYPOINT = <name of main py file>
+```
