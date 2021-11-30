@@ -73,7 +73,7 @@ CONDA_ENV_SLUG = tensorflow27_p37_cpu_v1
 
 ### How to read a CSV file directly from Object Storage using ocfs
 
-[OCFS](https://docs.oracle.com/en-us/iaas/tools/ocifs-sdk/latest/index.html) is a library, provided from Oracle Data Science team, that enables you to easily access the **Object Storage** as if it were a file system.
+[ocifs](https://docs.oracle.com/en-us/iaas/tools/ocifs-sdk/latest/index.html) is a library, provided from Oracle Data Science team, that enables you to easily access the **Object Storage** as if it were a file system.
 
 Using the function **read_from_object_storage**, provided in utils.py, you can read a CSV file, stored on the Object Storage, in a **Pandas DataFrame**.
 
@@ -94,6 +94,10 @@ def read_from_object_storage(prefix, file_name):
 
 In utils.py you can find also an example, useful to **write** a binary file (for example the model file) to Object Storage.
 
+If you want to use in the JOB the Resource Principal way of **handling security**, you need:
+* add the JOBS to the Dynamic Group
+* add proper policies for Object Storage access to the Dynamic Group
+
 ### Pipelines
 
 You can launch a DS JOB using the REST API ([see](./test_invoke_job_run.ipynb)).
@@ -102,7 +106,7 @@ In OCI Data Integration you can use **REST task** to invoke a REST service. Ther
 
 ### Zip file
 
-It is possible to create a JOB from a zip file containing multiple .py files (+ additional files).
+It is possible to create a JOB from a **zip** file containing multiple .py files (+ additional files).
 
 In this case, when you create the JOB you have to specify
 
@@ -118,3 +122,4 @@ PATH_DECOMPRESSED = "/home/datascience/decompressed_artifact"
 
 [test40.py](./test40.py) is an example that you can use if you want to add a custom score.py (useful for Model deployment)
 
+Another example where you need to use a zip file is when you neeed to access **ADWH**. In this situation you need to add to your files the wallet.
