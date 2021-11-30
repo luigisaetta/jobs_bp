@@ -109,3 +109,12 @@ In this case, when you create the JOB you have to specify
 ```
 JOB_RUN_ENTRYPOINT = <name of main py file>
 ```
+
+If you create a zip file without sub-directories, your files will be put in
+
+```
+PATH_DECOMPRESSED = "/home/datascience/decompressed_artifact"
+```
+
+[test40.py](./test40.py) is an example that you can use if you want to add a custom score.py (useful for Model deployment)
+
