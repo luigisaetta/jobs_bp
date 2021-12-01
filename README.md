@@ -1,4 +1,4 @@
-# OCI Data SCience JOBS Best Practices
+# OCI Data Science JOBS Best Practices
 This repository contains a set of examples, with best practices for using **Data Science Jobs**
 
 In OCI Data Science you can execute your Python code, for example to train a ML model, interactively using Notebook Sessions.
