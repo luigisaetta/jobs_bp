@@ -1,5 +1,12 @@
-# jobs_bp
-This repository contains a set of examples with best practices for using **Data Science Jobs**
+# OCI Data SCience JOBS Best Practices
+This repository contains a set of examples, with best practices for using **Data Science Jobs**
+
+In OCI Data Science you can execute your Python code, for example to train a ML model, interactively using Notebook Sessions.
+But very often you want to run that code in "batch mode", in order to be able to execute every time exactly the same steps.
+
+In OCI Data Science you can launch:
+* OCI DataFlow application, based on Apache Spark
+* OCI DataScience JOBS.
 
 With **Data Science JOBS** you can do in batch mode: 
 * Data Preparation

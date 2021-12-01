@@ -15,6 +15,10 @@ We will assume that:
 * We're using a Data Science Conda environment (for this example tf27_p37)
 * We know how the "ML model internally works". In other words, how to use the artifacts we're downloading from the Model Catalog.
 
+### Model validation
+Well, it is easy to understand that the same example, with small changes, can be used to do Model Validation.
+In this case you want to do predictions on a **test dataset** and compute some metrics (accuracy, AUC, ...) to verify, for example, that performances of your model have not degraded.
+
 ### Conda environments
 The Conda environment we're using is one of the environment built-in Oracle Data Science, the one identified by the "slug" **tensorflow27_p37_cpu_v1**
 
