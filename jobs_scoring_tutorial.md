@@ -25,7 +25,18 @@ But you can use any other environment, even a custom environment (that has been 
 ### Dataset used
 The dataset used is orcl_attrition.csv
 
+### Custom environment variables
+To launch correctly the JOB we need to specify the followings environment variables:
+
+```
+CONDA_ENV_TYPE = service
+CONDA_ENV_SLUG = tensorflow27_p37_cpu_v1
+JOB_RUN_ENTRYPOINT = test_scoring.py
+```
+
 ### Steps
+
+In the code of the main py files (**test_scoring.py**) you need to put the code for the following steps:
 
 1. Download the dataset from the Object Storage
 2. Download Model's artifacts from the Model Catalog
