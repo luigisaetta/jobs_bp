@@ -12,6 +12,7 @@ With **Data Science JOBS** you can do in batch mode:
 * How to launch a JOB using Oracle **ADS**
 * How to use **ocifs** for reading from and writing to Object Storage
 * How to use Resource Principal
+* How to do batch scoring using JOBS
 
 ## Examples
 * [utils.py](./utils.py) with examples on how to use ocifs
@@ -19,6 +20,7 @@ With **Data Science JOBS** you can do in batch mode:
 * Get the list of defined JOBS using ADS: [here.](./test_jobs_ads.ipynb)
 * [Example](./test30.py) of a Python script using JOBS to do: loading of data, training of ML model, saving the model to Model Catalog
 * [Example](./run_job_using_ads.ipynb) showing how to launch a JOB using Oracle **ADS**
+* [Batch scoring using a JOB](./jobs_scoring_tutorial.md)
 
 ## Documentation
 I have put some notes and best practices: [here.](./bp.md)
