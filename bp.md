@@ -122,4 +122,4 @@ PATH_DECOMPRESSED = "/home/datascience/decompressed_artifact"
 
 [test40.py](./test40.py) is an example that you can use if you want to add a custom score.py (useful for Model deployment)
 
-Another example where you need to use a zip file is when you neeed to access **ADWH**. In this situation you need to add to your files the wallet.
+Another example where you need to use a zip file is when you need to access **ADWH**. In this situation you need to add to your files the wallet.
