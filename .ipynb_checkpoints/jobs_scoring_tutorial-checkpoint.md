@@ -3,15 +3,17 @@
 ### Introduction
 In this tutorial we assume that you have already trained a ML model and that you have saved the model in the Model Catalog.
 
-We are going to see, step by step, how to do **"scoring in batch mode"**. In other words, how to use DS JOBS to do predictions on an input dataset.
+We are going to see, step by step, how to do **"scoring in batch mode"**. 
+
+In other words, how to use DS JOBS to do predictions on an input dataset.
 
 We will assume that:
-* the Model has been trained and saved to the Model Catalog.
-* the dataset on which we want to do scoring is saved in a bucket on the Object Storage
-* the predictions will be saved to the Object Storage
-* everything has been configured in order to have Resource Principal working
-* we're using a Data Science Conda environment (for this example tf27_p37)
-* we know how the "ML model internally works". In other words, how to use the artifacts we're downloading from the Model Catalog.
+* The Model has been trained and saved to the Model Catalog.
+* The dataset on which we want to do scoring is saved in a bucket on the Object Storage
+* The predictions will be saved to the Object Storage
+* Everything has been configured in order to have Resource Principal working
+* We're using a Data Science Conda environment (for this example tf27_p37)
+* We know how the "ML model internally works". In other words, how to use the artifacts we're downloading from the Model Catalog.
 
 ### Conda environments
 The Conda environment we're using is one of the environment built-in Oracle Data Science, the one identified by the "slug" **tensorflow27_p37_cpu_v1**
